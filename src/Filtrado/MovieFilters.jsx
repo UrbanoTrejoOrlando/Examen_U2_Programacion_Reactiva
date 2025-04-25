@@ -9,7 +9,7 @@ export default function MovieFilters() {
 
   return (
     <div className="bg-white p-6 rounded-xl shadow-md border mb-6">
-      <h2 className="text-xl font-semibold mb-4 text-gray-800">🎬 Filtrar Películas</h2>
+      <h2 className="text-xl font-semibold mb-4 text-gray-800"> Filtrar Películas</h2>
       <div className="flex flex-col sm:flex-row gap-4">
         <div className="flex flex-col w-full">
           <label htmlFor="title" className="text-sm text-gray-600 mb-1">Título</label>
