@@ -16,7 +16,7 @@ export default function MovieCard({ movie }) {
         </button>
       </div>
       <p className="text-gray-700 mb-2">{movie.description}</p>
-      <span className="text-sm text-gray-500 italic">🎭 Género: {movie.genre}</span>
+      <span className="text-sm text-gray-500 italic">Género: {movie.genre}</span>
       <div className="mt-4 flex gap-4">
         <button
           onClick={() => setEditingMovie(movie)}
