@@ -40,7 +40,7 @@ export function MovieProvider({ children }) {
       )
     );
   };
-
+// Filtrado de las peliculas
   const filteredMovies = movies.filter(movie =>
     movie.title.toLowerCase().includes(filter.title.toLowerCase()) &&
     movie.genre.toLowerCase().includes(filter.genre.toLowerCase())
