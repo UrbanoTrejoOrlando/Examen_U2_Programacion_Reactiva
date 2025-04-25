@@ -32,69 +32,66 @@ export default function Formulario() {
   return (
     <form
       onSubmit={handleSubmit}
-      className="max-w-xl mx-auto bg-white shadow-lg rounded-2xl p-6 space-y-5 border border-gray-200"
+      className="max-w-2xl mx-auto bg-white border border-gray-200 rounded-2xl shadow-md p-8 space-y-6 transition"
     >
-      <h2 className="text-2xl font-bold text-center text-indigo-600">
-        {editingMovie ? "Editar Película" : "Agregar Película"}
+      <h2 className="text-3xl font-bold text-center text-blue-600 tracking-tight">
+        {editingMovie ? "Editar Película " : "Agregar Nueva Película"}
       </h2>
 
-      <div>
-        <label className="block mb-1 text-sm font-medium text-gray-700">
-          Título
-        </label>
-        <input
-          name="title"
-          value={form.title}
-          onChange={handleChange}
-          placeholder="Título de la película"
-          className="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 transition"
-          required
-        />
-      </div>
+      <div className="grid gap-5 md:grid-cols-2">
+        <div className="col-span-2">
+          <label className="block text-sm font-medium text-gray-700 mb-1">Título</label>
+          <input
+            name="title"
+            value={form.title}
+            onChange={handleChange}
+            placeholder="Ej. Inception, Matrix..."
+            className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 transition"
+            required
+          />
+        </div>
 
-      <div>
-        <label className="block mb-1 text-sm font-medium text-gray-700">
-          Descripción
-        </label>
-        <input
-          name="description"
-          value={form.description}
-          onChange={handleChange}
-          placeholder="Descripción breve"
-          className="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 transition"
-          required
-        />
-      </div>
+        <div className="col-span-2">
+          <label className="block text-sm font-medium text-gray-700 mb-1">Descripción</label>
+          <textarea
+            name="description"
+            value={form.description}
+            onChange={handleChange}
+            placeholder="Breve sinopsis o resumen..."
+            rows={3}
+            className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 transition resize-none"
+            required
+          ></textarea>
+        </div>
 
-      <div>
-        <label className="block mb-1 text-sm font-medium text-gray-700">
-          Género
-        </label>
-        <input
-          name="genre"
-          value={form.genre}
-          onChange={handleChange}
-          placeholder="Ej. Drama, Comedia, etc."
-          className="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 transition"
-          required
-        />
+        <div className="col-span-2">
+          <label className="block text-sm font-medium text-gray-700 mb-1">Género</label>
+          <input
+            name="genre"
+            value={form.genre}
+            onChange={handleChange}
+            placeholder="Acción, Drama, Comedia, etc."
+            className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 transition"
+            required
+          />
+        </div>
       </div>
 
       <div className="flex justify-between items-center pt-2">
         <button
           type="submit"
-          className="bg-indigo-600 hover:bg-indigo-700 text-white px-5 py-2 rounded-lg font-semibold transition"
+          className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-2 rounded-lg transition"
         >
-          {editingMovie ? "Actualizar" : "Agregar"}
+          {editingMovie ? "Actualizar Película" : "Agregar Película"}
         </button>
 
         {editingMovie && (
           <button
             type="button"
             onClick={() => setEditingMovie(null)}
-            className="text-red-500 hover:underline transition"
+            className="text-red-500 font-medium hover:underline transition"
           >
-            Cancelar
+            Cancelar edición
           </button>
         )}
       </div>
