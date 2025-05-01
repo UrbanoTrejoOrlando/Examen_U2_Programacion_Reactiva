@@ -13,6 +13,7 @@ export default function MovieFilters() {
   };
 
   return (
+    // Contenedor estilizado para el formulario de filtros
     <div className="bg-white p-6 rounded-xl shadow-md border mb-6">
       <h2 className="text-xl font-semibold mb-4 text-gray-800"> Filtrar Películas</h2>
       <div className="flex flex-col sm:flex-row gap-4">
