@@ -1,6 +1,7 @@
 // Importa el hook personalizado useMovies desde el contexto MovieContext
 import { useMovies } from "../Context/MovieContext";
 
+// Componente funcional MovieCard que recibe una película (movie) como prop
 export default function MovieCard({ movie }) {
   const { deleteMovie, toggleFavorite, setEditingMovie } = useMovies();
 
