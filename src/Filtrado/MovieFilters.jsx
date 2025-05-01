@@ -1,6 +1,7 @@
 // Importa el hook personalizado useMovies desde el contexto MovieContext
 import { useMovies } from "../Context/MovieContext";
 
+// Componente funcional que muestra campos para filtrar películas por título o género
 export default function MovieFilters() {
   const { filter, setFilter } = useMovies();
 
