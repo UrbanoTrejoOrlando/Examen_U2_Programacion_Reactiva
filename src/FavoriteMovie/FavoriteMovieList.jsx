@@ -13,6 +13,7 @@ export default function FavoriteList() {
   if (favorites.length === 0) return null;
 
   return (
+     // Contenedor con margen inferior
     <div className="mb-6">
       <h2 className="text-xl font-semibold mb-2 text-yellow-600">Favoritas</h2>
       {favorites.map(movie => (
