@@ -17,6 +17,7 @@ export default function FavoriteList() {
     <div className="mb-6">
       {/* Título de la sección de favoritas */}
       <h2 className="text-xl font-semibold mb-2 text-yellow-600">Favoritas</h2>
+      {/* Mapea cada película favorita y la renderiza usando MovieCard */}
       {favorites.map(movie => (
         <MovieCard key={movie.id} movie={movie} />
       ))}
