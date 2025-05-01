@@ -6,6 +6,7 @@ import MovieCard from "../Card/Card";
 
 // Componente funcional FavoriteList que muestra las películas marcadas como favoritas
 export default function FavoriteList() {
+    // Extrae solo el arreglo de películas favoritas desde el contexto
   const { favorites } = useMovies();
 
   if (favorites.length === 0) return null;
