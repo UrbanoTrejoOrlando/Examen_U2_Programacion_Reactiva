@@ -3,10 +3,11 @@ import { useMovies } from "../Context/MovieContext";
 
 // Componente funcional MovieCard que recibe una película (movie) como prop
 export default function MovieCard({ movie }) {
-    // Extrae las funciones del contexto: eliminar, marcar como favorito, y editar
+  // Extrae las funciones del contexto: eliminar, marcar como favorito, y editar
   const { deleteMovie, toggleFavorite, setEditingMovie } = useMovies();
 
   return (
+    // Contenedor principal con estilos: fondo blanco, bordes redondeados, sombra, padding, etc.
     <div className="bg-white rounded-xl shadow-md p-6 mb-4 border border-gray-200 transition hover:shadow-lg">
       <div className="flex justify-between items-start mb-2">
         <h3 className="text-xl font-semibold text-blue-700">{movie.title}</h3>
