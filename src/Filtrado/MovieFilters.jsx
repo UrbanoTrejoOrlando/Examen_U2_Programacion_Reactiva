@@ -8,6 +8,7 @@ export default function MovieFilters() {
 
   // Maneja el cambio en los campos de entrada (input)
   const handleChange = e => {
+    // Actualiza el filtro manteniendo los valores actuales y cambiando solo el campo modificado
     setFilter({ ...filter, [e.target.name]: e.target.value });
   };
 
