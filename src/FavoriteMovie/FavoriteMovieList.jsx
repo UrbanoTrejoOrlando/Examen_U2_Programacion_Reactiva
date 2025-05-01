@@ -9,6 +9,7 @@ export default function FavoriteList() {
     // Extrae solo el arreglo de películas favoritas desde el contexto
   const { favorites } = useMovies();
 
+    // Si no hay películas favoritas, no renderiza nada (retorna null)
   if (favorites.length === 0) return null;
 
   return (
