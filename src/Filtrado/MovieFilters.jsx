@@ -6,6 +6,7 @@ export default function MovieFilters() {
   // Extrae el estado actual del filtro y la función para actualizarlo desde el contexto
   const { filter, setFilter } = useMovies();
 
+  // Maneja el cambio en los campos de entrada (input)
   const handleChange = e => {
     setFilter({ ...filter, [e.target.name]: e.target.value });
   };
