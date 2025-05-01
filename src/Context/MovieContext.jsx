@@ -15,6 +15,7 @@ export function MovieProvider({ children }) {
     }
   }, []);
 
+  // Funcion para almacenar las peliculas en el localStorage
   useEffect(() => {
     localStorage.setItem("movies", JSON.stringify(movies));
   }, [movies]);
