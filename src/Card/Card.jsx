@@ -3,6 +3,7 @@ import { useMovies } from "../Context/MovieContext";
 
 // Componente funcional MovieCard que recibe una película (movie) como prop
 export default function MovieCard({ movie }) {
+    // Extrae las funciones del contexto: eliminar, marcar como favorito, y editar
   const { deleteMovie, toggleFavorite, setEditingMovie } = useMovies();
 
   return (
