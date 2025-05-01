@@ -1,3 +1,4 @@
+// Importaciones
 import { createContext, useContext, useState, useEffect } from "react";
 
 const MovieContext = createContext();
