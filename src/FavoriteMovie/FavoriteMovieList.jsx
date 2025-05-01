@@ -1,4 +1,6 @@
+// Importa el hook personalizado useMovies desde el contexto MovieContext
 import { useMovies } from "../Context/MovieContext";
+
 import MovieCard from "../Card/Card";
 
 export default function FavoriteList() {
