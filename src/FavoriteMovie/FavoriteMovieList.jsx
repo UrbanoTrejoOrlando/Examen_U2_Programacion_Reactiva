@@ -4,6 +4,7 @@ import { useMovies } from "../Context/MovieContext";
 // Importa el componente MovieCard para reutilizarlo
 import MovieCard from "../Card/Card";
 
+// Componente funcional FavoriteList que muestra las películas marcadas como favoritas
 export default function FavoriteList() {
   const { favorites } = useMovies();
 
