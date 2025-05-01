@@ -3,6 +3,7 @@ import { useMovies } from "../Context/MovieContext";
 
 // Componente funcional que muestra campos para filtrar películas por título o género
 export default function MovieFilters() {
+  // Extrae el estado actual del filtro y la función para actualizarlo desde el contexto
   const { filter, setFilter } = useMovies();
 
   const handleChange = e => {
